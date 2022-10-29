@@ -38,6 +38,7 @@ public class KinectOverlayer : MonoBehaviour
 			{
 				backgroundImage.texture = manager.GetUsersClrTex();
 			}*/
+		
 			
 //			Vector3 vRight = BottomRight - BottomLeft;
 //			Vector3 vUp = TopLeft - BottomLeft;
