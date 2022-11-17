@@ -29,6 +29,8 @@ public class conectar : MonoBehaviour
                 string value = serialport.ReadLine();
                 print(value);
                 string[] vec6=value.Split(',');
+
+                serialport.WriteLine("a");
                //Quaternion target = Quaternion.Euler(Convert.ToInt32(vec6[4]), 0, Convert.ToInt32(vec6[5]));
                //Joystick.transform.localRotation = Quaternion.Slerp(Joystick.transform.localRotation, target, Time.deltaTime * smooth);
             }
