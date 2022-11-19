@@ -7,7 +7,7 @@ using System.IO.Ports;
 
 public class IAProfe : MonoBehaviour
 {
-    SerialPort serialport= new SerialPort("COM5",9600);
+    SerialPort serialport= new SerialPort("COM3",9600);
     public float time;
     public GameObject Roja;
     public  GameObject gameOver;
@@ -45,7 +45,7 @@ public class IAProfe : MonoBehaviour
             resta = x_final - x_inicial;
             Debug.Log(resta.magnitude); 
 
-            if(resta.magnitude > 0.07f) {
+            if(resta.magnitude > 0.0035f) {
                 //game over, enviar la regla al jugador, que envie la señal al arduino y active el canva de game over
                 Debug.Log("Perdiste manco");
                         if(serialport.IsOpen){
@@ -78,7 +78,8 @@ public class IAProfe : MonoBehaviour
             yield return new WaitForSeconds(5);
             animator.SetBool("volearAtras",true);
             animator.SetBool("voltearFrente", false);
-            yield return new WaitForSeconds(2);
+            
+            //yield return new WaitForSeconds(2);
             Roja.SetActive(false);
             scanning = false;
             this.seTomaPosicionInicial = false;
