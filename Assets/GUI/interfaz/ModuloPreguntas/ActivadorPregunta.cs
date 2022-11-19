@@ -11,8 +11,8 @@ public class ActivadorPregunta : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		switch (col.gameObject.tag){
-		case "personaje":
-			Pregunta.SetActive (true);
+		case "Player":
+			Debug.Log("Hola");
 			break;
 		}
 	}
